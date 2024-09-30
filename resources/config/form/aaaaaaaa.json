@@ -1,4 +1,21 @@
 {
   "display" : "form",
-  "components" : [ ]
+  "components" : [ {
+    "label" : "Text Field",
+    "applyMaskOn" : "change",
+    "tableView" : true,
+    "key" : "textField",
+    "type" : "textfield",
+    "input" : true,
+    "attributes" : {
+      "data-testid" : "aaaaaaaa-textField"
+    }
+  }, {
+    "type" : "button",
+    "label" : "Submit",
+    "key" : "submit",
+    "disableOnInvalid" : true,
+    "input" : true,
+    "tableView" : false
+  } ]
 }
