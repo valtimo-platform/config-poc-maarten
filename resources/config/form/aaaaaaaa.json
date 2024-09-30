@@ -1,21 +1,31 @@
 {
   "display" : "form",
   "components" : [ {
-    "label" : "Text Field",
-    "applyMaskOn" : "change",
-    "tableView" : true,
     "key" : "textField",
     "type" : "textfield",
     "input" : true,
+    "label" : "Text Field",
+    "tableView" : true,
+    "applyMaskOn" : "change",
     "attributes" : {
       "data-testid" : "aaaaaaaa-textField"
     }
   }, {
-    "type" : "button",
-    "label" : "Submit",
-    "key" : "submit",
-    "disableOnInvalid" : true,
+    "label" : "Text Field",
+    "applyMaskOn" : "change",
+    "tableView" : true,
+    "key" : "textField1",
+    "type" : "textfield",
     "input" : true,
-    "tableView" : false
+    "attributes" : {
+      "data-testid" : "aaaaaaaa-textField1"
+    }
+  }, {
+    "key" : "submit",
+    "type" : "button",
+    "input" : true,
+    "label" : "Submit",
+    "tableView" : false,
+    "disableOnInvalid" : true
   } ]
 }
