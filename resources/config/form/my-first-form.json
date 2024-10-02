@@ -1,0 +1,31 @@
+{
+  "display": "form",
+  "components": [
+    {
+      "label": "Firstname",
+      "applyMaskOn": "change",
+      "tableView": true,
+      "validateWhenHidden": false,
+      "key": "firstname",
+      "type": "textfield",
+      "input": true
+    },
+    {
+      "label": "Lastname",
+      "applyMaskOn": "change",
+      "tableView": true,
+      "validateWhenHidden": false,
+      "key": "lastname",
+      "type": "textfield",
+      "input": true
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "key": "submit",
+      "disableOnInvalid": true,
+      "input": true,
+      "tableView": false
+    }
+  ]
+}
