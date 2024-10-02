@@ -1,0 +1,15 @@
+{
+  "$schema" : "http://json-schema.org/draft-07/schema#",
+  "type" : "object",
+  "title" : "My first schema",
+  "required" : [ "firstname", "lastname" ],
+  "properties" : {
+    "firstname" : {
+      "type" : "string"
+    },
+    "lastname" : {
+      "type" : "string"
+    }
+  },
+  "$id" : "my-first-schema.schema"
+}
