@@ -1,38 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1gbkeud" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.27.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.21.0">
-  <bpmn:process id="my-first-bpmn" isExecutable="true">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1gbkeud" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.27.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.21.0">
+  <bpmn:process id="my-first-bpmn" name="My first bpmn" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
       <bpmn:outgoing>Flow_1qu4if8</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:endEvent id="Event_0u2t6pg">
-      <bpmn:incoming>Flow_11i4d7m</bpmn:incoming>
+      <bpmn:incoming>Flow_0wi8nee</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_11i4d7m" sourceRef="complete-form" targetRef="Event_0u2t6pg" />
+    <bpmn:sequenceFlow id="Flow_11i4d7m" sourceRef="complete-form" targetRef="Activity_0d48rt7" />
     <bpmn:sequenceFlow id="Flow_1qu4if8" sourceRef="StartEvent_1" targetRef="complete-form" />
     <bpmn:userTask id="complete-form" name="Complete form">
       <bpmn:incoming>Flow_1qu4if8</bpmn:incoming>
       <bpmn:outgoing>Flow_11i4d7m</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0wi8nee" sourceRef="Activity_0d48rt7" targetRef="Event_0u2t6pg" />
+    <bpmn:serviceTask id="Activity_0d48rt7" name="Do something" camunda:expression="${myProcessBean.helloworld(execution)}">
+      <bpmn:incoming>Flow_11i4d7m</bpmn:incoming>
+      <bpmn:outgoing>Flow_0wi8nee</bpmn:outgoing>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="my-first-bpmn">
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="179" y="99" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0u2t6pg_di" bpmnElement="Event_0u2t6pg">
-        <dc:Bounds x="432" y="99" width="36" height="36" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1y4bvj6_di" bpmnElement="complete-form">
         <dc:Bounds x="280" y="77" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_11i4d7m_di" bpmnElement="Flow_11i4d7m">
-        <di:waypoint x="380" y="117" />
-        <di:waypoint x="432" y="117" />
-      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0u2t6pg_di" bpmnElement="Event_0u2t6pg">
+        <dc:Bounds x="582" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0wlphjh_di" bpmnElement="Activity_0d48rt7">
+        <dc:Bounds x="430" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1qu4if8_di" bpmnElement="Flow_1qu4if8">
         <di:waypoint x="215" y="117" />
         <di:waypoint x="280" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11i4d7m_di" bpmnElement="Flow_11i4d7m">
+        <di:waypoint x="380" y="117" />
+        <di:waypoint x="430" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0wi8nee_di" bpmnElement="Flow_0wi8nee">
+        <di:waypoint x="530" y="117" />
+        <di:waypoint x="582" y="117" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
