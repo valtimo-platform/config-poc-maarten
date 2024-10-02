@@ -1,41 +1,51 @@
 {
-    "display": "form",
-    "settings": {
-        "pdf": {
-            "id": "1ec0f8ee-6685-5d98-a847-26f67b67d6f0",
-            "src": "https://files.form.io/pdf/5692b91fd1028f01000407e3/file/1ec0f8ee-6685-5d98-a847-26f67b67d6f0"
-        }
+  "display" : "form",
+  "settings" : {
+    "pdf" : {
+      "id" : "1ec0f8ee-6685-5d98-a847-26f67b67d6f0",
+      "src" : "https://files.form.io/pdf/5692b91fd1028f01000407e3/file/1ec0f8ee-6685-5d98-a847-26f67b67d6f0"
+    }
+  },
+  "components" : [ {
+    "type" : "htmlelement",
+    "input" : false,
+    "label" : "HTML",
+    "content" : "<strong>Comments</strong>",
+    "tableView" : false,
+    "refreshOnChange" : false,
+    "key" : ""
+  }, {
+    "label" : "Text Field",
+    "applyMaskOn" : "change",
+    "tableView" : true,
+    "key" : "textField",
+    "type" : "textfield",
+    "input" : true,
+    "attributes" : {
+      "data-testid" : "commenting.start-textField"
+    }
+  }, {
+    "key" : "comment.text",
+    "rows" : 5,
+    "type" : "textarea",
+    "input" : true,
+    "hideLabel" : true,
+    "tableView" : true,
+    "autoExpand" : true,
+    "attributes" : {
+      "data-testid" : "commenting.start-comment.text"
     },
-    "components": [
-        {
-            "type": "htmlelement",
-            "input": false,
-            "label": "HTML",
-            "content": "<strong>Comments</strong>",
-            "tableView": false,
-            "refreshOnChange": false
-        },
-        {
-            "key": "comment.text",
-            "rows": 5,
-            "type": "textarea",
-            "input": true,
-            "hideLabel": true,
-            "tableView": true,
-            "autoExpand": true,
-            "defaultValue": ""
-        },
-        {
-            "label": "Send",
-            "showValidations": false,
-            "tableView": false,
-            "key": "submit",
-            "customClass": "submit-btn-id",
-            "disableOnInvalid": true,
-            "type": "button",
-            "action": "custom",
-            "custom": "component.disabled = true; form.submit(); instance.redraw();",
-            "input": false
-        }
-    ]
+    "label" : "Text Area"
+  }, {
+    "key" : "submit",
+    "type" : "button",
+    "input" : false,
+    "label" : "Send",
+    "action" : "custom",
+    "custom" : "component.disabled = true; form.submit(); instance.redraw();",
+    "tableView" : false,
+    "customClass" : "submit-btn-id",
+    "showValidations" : false,
+    "disableOnInvalid" : true
+  } ]
 }
