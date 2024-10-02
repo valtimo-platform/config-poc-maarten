@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0pbwwyp" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.4.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <bpmn:process id="commentingProcess" name="Comment" isExecutable="true">
+    <bpmn:startEvent id="start-event">
+      <bpmn:outgoing>Flow_0eoki9y</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="end-event">
+      <bpmn:incoming>Flow_0eoki9y</bpmn:incoming>
+      <bpmn:terminateEventDefinition id="TerminateEventDefinition_1wdiqq8" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0eoki9y" sourceRef="start-event" targetRef="end-event" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="commentingProcess">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="start-event">
+        <dc:Bounds x="179" y="79" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0jvvw1i_di" bpmnElement="end-event">
+        <dc:Bounds x="292" y="79" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0eoki9y_di" bpmnElement="Flow_0eoki9y">
+        <di:waypoint x="215" y="97" />
+        <di:waypoint x="292" y="97" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
